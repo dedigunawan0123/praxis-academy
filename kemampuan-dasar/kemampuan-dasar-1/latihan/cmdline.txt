@@ -1,0 +1,16 @@
+1. =============== cd ===================
+This command is the same as the chdir command.
+
+
+C:\Users\Dedi Gunawan>cd praxis-academy
+
+C:\Users\Dedi Gunawan\praxis-academy>
+
+
+2. =============== chdir ===================
+This command is the same as the cd command.
+
+C:\Users\Dedi Gunawan>chdir praxis-academy
+
+C:\Users\Dedi Gunawan\praxis-academy>
+

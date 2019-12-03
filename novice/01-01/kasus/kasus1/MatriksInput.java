@@ -11,15 +11,11 @@ import java.util.Scanner;
 public class MatriksInput{
 
     public static void main(String [] args){
-        // ini adalah program penjumlahan matriks 3X3 dengan 3X3
+        // ini adalah program penjumlahan matriks dengan inputan dari user
         
-        int intOrdoMatriks1 = 3;
-        int intOrdoMatriks2 = 3;
-        int intOrdoMatriks3 = 3;
-
-        int[][] arrMatriks1 = new int[intOrdoMatriks1][intOrdoMatriks1];
-        int[][] arrMatriks2 = new int[intOrdoMatriks2][intOrdoMatriks2];
-        int[][] arrMatriks3 = new int[intOrdoMatriks3][intOrdoMatriks3];
+        int intOrdoMatriks1 = 0;
+        int intOrdoMatriks2 = 0;
+        int intOrdoMatriks3 = 0;
 
         // ini adalah inputan jumlah ordo
 
@@ -38,6 +34,11 @@ public class MatriksInput{
         else {
             
             intOrdoMatriks3 = intOrdoMatriks1;
+
+
+            int[][] arrMatriks1 = new int[intOrdoMatriks1][intOrdoMatriks1];
+            int[][] arrMatriks2 = new int[intOrdoMatriks2][intOrdoMatriks2];
+            int[][] arrMatriks3 = new int[intOrdoMatriks3][intOrdoMatriks3];
 
             // ini adalah inputan untuk matriks 1 dari user
 

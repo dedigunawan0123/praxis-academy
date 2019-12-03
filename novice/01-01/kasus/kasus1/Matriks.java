@@ -2,7 +2,8 @@
  Program    : Penjumlahan Matriks
  Authors    : Dedi Gunawan
  Date       : 3 Desember 2019
- 
+ Programming: Java 
+
 */
 
 public class Matriks{
@@ -54,12 +55,57 @@ public class Matriks{
             }
         }
 
-        // Proses penampilan isi matriks hasil penjumlahan
+        // Proses penampilan matriks
 
         String strTempTampilan = "";
         String strSpasi = "     ";
         int intLengthSpasi = 0;
         int intLengthAngka = 0;
+
+
+        // Proses menampilkan isi matriks ke 1
+
+        for (int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++){
+
+                intLengthAngka = Integer.toString( arrMatriks1[i][j]).length();
+                // System.out.println( Integer.toString( intLengthAngka ) );
+                if (intLengthAngka < strSpasi.length() ){
+                    intLengthSpasi = strSpasi.length() - intLengthAngka;
+
+                } 
+
+                strTempTampilan = strTempTampilan + strSpasi + arrMatriks1[i][j];
+            }
+            System.out.println("| " + strTempTampilan + " |");
+
+            strTempTampilan = "";
+        }
+        System.out.println(strSpasi);
+        System.out.println("   +   ");
+
+        // Proses menampilkan isi matriks ke 2
+
+        for (int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++){
+
+                intLengthAngka = Integer.toString( arrMatriks2[i][j]).length();
+                // System.out.println( Integer.toString( intLengthAngka ) );
+                if (intLengthAngka < strSpasi.length() ){
+                    intLengthSpasi = strSpasi.length() - intLengthAngka;
+
+                } 
+
+                strTempTampilan = strTempTampilan + strSpasi + arrMatriks2[i][j];
+            }
+            System.out.println("| " + strTempTampilan + " |");
+
+            strTempTampilan = "";
+        }
+        System.out.println(strSpasi);
+        System.out.println("   =   ");
+
+        // Proses penampilan isi matriks hasil penjumlahan
 
         for (int i = 0; i < 3; i++){
             for (int j = 0; j < 3; j++){
@@ -68,16 +114,12 @@ public class Matriks{
                 // System.out.println( Integer.toString( intLengthAngka ) );
                 if (intLengthAngka < strSpasi.length() ){
                     intLengthSpasi = strSpasi.length() - intLengthAngka;
-                    
-                    while (intLengthSpasi > 0){
-                        strSpasi = strSpasi + " ";
-                        intLengthSpasi = intLengthSpasi - 1 ;
-                    }
+
                 } 
 
                 strTempTampilan = strTempTampilan + strSpasi + arrMatriks3[i][j];
             }
-            System.out.println(strTempTampilan);
+            System.out.println("| " + strTempTampilan + " |");
 
             strTempTampilan = "";
         }

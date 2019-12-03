@@ -1,3 +1,10 @@
+/*
+ Program    : Penjumlahan Matriks
+ Authors    : Dedi Gunawan
+ Date       : 3 Desember 2019
+ 
+*/
+
 public class Matriks{
 
     public static void main(String [] args){

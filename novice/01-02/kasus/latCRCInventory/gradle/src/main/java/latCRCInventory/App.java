@@ -18,5 +18,9 @@ public class App {
         // Show Supplier
         Supplier oSupplier = new Supplier();
         oSupplier.showSupplier();
+
+        //Show Pengadaan
+        Pengadaan oPengadaan = new Pengadaan();
+        oPengadaan.showPengadaan();
     }
 }

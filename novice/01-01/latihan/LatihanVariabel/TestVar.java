@@ -1,4 +1,4 @@
-public class Test {
+public class TestVar {
    public void pupAge() {
       int age = 0;
       age = age + 7;
@@ -6,7 +6,7 @@ public class Test {
    }
 
    public static void main(String args[]) {
-      Test test = new Test();
-      test.pupAge();
+      TestVar testVar = new TestVar();
+      testVar.pupAge();
    }
 }

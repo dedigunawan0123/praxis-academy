@@ -1,0 +1,89 @@
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/01-04/latihan/lat3ATM/gradle$ gradle run
+
+> Task :run
+====================================================
+        Welcome to this simple ATM machine
+====================================================
+
+        Please select ATM Transactions
+        Press [1] Deposit
+        Press [2] Withdraw
+        Press [3] Balance Inquiry
+        Press [4] Exit
+
+        What would you like to do? 
+<<=========----> 75% EXECUTING [5s]     Your current balance is 0.0
+
+        Would you like to try another transaction?
+
+        Press [1] Yes 
+        Press [2] No
+        Enter choice: 
+<=========----> 75% EX  Please select ATM Transactions
+        Press [1] Deposit
+        Press [2] Withdraw
+        Press [3] Balance Inquiry
+        Press [4] Exit
+
+        What would you like to do? 
+<=========----> 75% EXECUTING [11s]
+        Enter the amount of money to deposit: 
+<<==<==<=========----> 75% EXECUTING [16s]      You deposited the amount of 1000000.0
+
+        Would you like to try another transaction?
+
+        Press [1] Yes 
+        Press [2] No
+        Enter choice: 
+<<=========----> 75% E  Please select ATM Transactions
+        Press [1] Deposit
+        Press [2] Withdraw
+        Press [3] Balance Inquiry
+        Press [4] Exit
+
+        What would you like to do? 
+<<=========----> 75% EXECUTING [24s     Your current balance is 1000000.0
+
+        Would you like to try another transaction?
+
+        Press [1] Yes 
+        Press [2] No
+        Enter choice: 
+<=========----> 75% EX  Please select ATM Transactions
+        Press [1] Deposit
+        Press [2] Withdraw
+        Press [3] Balance Inquiry
+        Press [4] Exit
+
+        What would you like to do? 
+<=========----> 75% EXECUTING [30s]
+        To withdraw, make sure that you have sufficient balance in your account.
+        Enter amount of money to withdraw: 
+<<<==<=========----> 75% EXECUTING [36s]
+        You withdraw the amount of Php 600000.0
+
+        Would you like to try another transaction?
+
+        Press [1] Yes 
+        Press [2] No
+        Enter choice: 
+<<=========----> 75% E  Please select ATM Transactions
+        Press [1] Deposit
+        Press [2] Withdraw
+        Press [3] Balance Inquiry
+        Press [4] Exit
+
+        What would you like to do? 
+<=========----> 75% EXECUTING [46s]     Your current balance is 400000.0
+
+        Would you like to try another transaction?
+
+        Press [1] Yes 
+        Press [2] No
+        Enter choice: 
+<<=========----> 75% EXECUTING [51s]
+        Thank you for using this simple ATM Machine.
+
+BUILD SUCCESSFUL in 52s
+2 actionable tasks: 1 executed, 1 up-to-date
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/01-04/latihan/lat3ATM/gradle$ 

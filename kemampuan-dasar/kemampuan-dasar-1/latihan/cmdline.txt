@@ -1,16 +1,272 @@
-1. =============== cd ===================
-This command is the same as the chdir command.
+1. =============== ls ===================
+If you want to see the list of files on your UNIX or Linux system, use the 'ls' command. 
+
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public     Tugas
+Documents  examples.desktop  Pictures  Templates  Videos
+dedi@dedi-HP-Notebook:~$ 
+
+'ls -al' gives detailed information of the files. The command provides information in a columnar format. The columns contain the following information: 
+
+dedi@dedi-HP-Notebook:~$ ls -al
+total 148
+drwxr-xr-x 21 dedi dedi  4096 Des  4 11:34 .
+drwxr-xr-x  3 root root  4096 Des  2 04:30 ..
+-rw-------  1 dedi dedi 10891 Des  5 14:19 .bash_history
+-rw-r--r--  1 dedi dedi   220 Des  2 04:30 .bash_logout
+-rw-r--r--  1 dedi dedi  3771 Des  2 04:30 .bashrc
+drwx------ 15 dedi dedi  4096 Des  3 15:32 .cache
+drwx------ 15 dedi dedi  4096 Des  6 16:18 .config
+drwxr-xr-x  2 dedi dedi  4096 Des  2 11:41 Desktop
+drwxr-xr-x  2 dedi dedi  4096 Des  2 11:41 Documents
+drwxr-xr-x  4 dedi dedi  4096 Des  6 14:44 Downloads
+-rw-r--r--  1 dedi dedi  8980 Des  2 04:30 examples.desktop
+-rw-r--r--  1 dedi dedi    66 Des  3 11:28 .gitconfig
+drwx------  3 dedi dedi  4096 Des  1 21:49 .gnupg
+drwxr-xr-x  7 dedi dedi  4096 Des  4 10:36 .gradle
+-rw-------  1 dedi dedi  4654 Des  4 11:34 .ICEauthority
+drwx------  3 dedi dedi  4096 Des  2 11:41 .local
+drwx------  5 dedi dedi  4096 Des  1 22:07 .mozilla
+drwxr-xr-x  2 dedi dedi  4096 Des  2 11:41 Music
+drwxr-xr-x  2 dedi dedi  4096 Des  4 10:35 Pictures
+drwx------  3 dedi dedi  4096 Des  1 22:12 .pki
+-rw-r--r--  1 dedi dedi   807 Des  2 04:30 .profile
+drwxr-xr-x  2 dedi dedi  4096 Des  2 11:41 Public
+drwx------  2 dedi dedi  4096 Des  1 21:49 .ssh
+-rw-r--r--  1 dedi dedi     0 Des  1 21:50 .sudo_as_admin_successful
+drwxr-xr-x  2 dedi dedi  4096 Des  2 11:41 Templates
+drwxrwxr-x  3 dedi dedi  4096 Des  3 14:13 .tooling
+drwxr-xr-x  3 dedi dedi  4096 Des  3 11:20 Tugas
+drwxr-xr-x  2 dedi dedi  4096 Des  2 11:41 Videos
+-rw-------  1 dedi dedi 15381 Des  4 11:09 .viminfo
+drwxrwxr-x  3 dedi dedi  4096 Des  1 22:12 .vscode
+
+Any Directory/file starting with a '.' will not be seen unless you request for it.  To view hidden files, use the command. 
+
+dedi@dedi-HP-Notebook:~$ ls -a
+.              Documents         .mozilla                   Templates
+..             Downloads         Music                      .tooling
+.bash_history  examples.desktop  Pictures                   Tugas
+.bash_logout   .gitconfig        .pki                       Videos
+.bashrc        .gnupg            .profile                   .viminfo
+.cache         .gradle           Public                     .vscode
+.config        .ICEauthority     .ssh
+Desktop        .local            .sudo_as_admin_successful
+dedi@dedi-HP-Notebook:~$ 
 
 
-C:\Users\Dedi Gunawan>cd praxis-academy
 
-C:\Users\Dedi Gunawan\praxis-academy>
+2. =============== cat ===================
+The 'cat' command is used to display text files. It can also be used for copying, combining and creating new text files.
+
+dedi@dedi-HP-Notebook:~$ cat > sample1
+Ini adalah file yang dibentuk dengan command cat
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public   Templates  Videos
+Documents  examples.desktop  Pictures  sample1  Tugas
+dedi@dedi-HP-Notebook:~$ 
+
+Ini untuk menampilkan isi suatu file
+
+dedi@dedi-HP-Notebook:~$ cat sample1
+Ini adalah file yang dibentuk dengan command cat
+dedi@dedi-HP-Notebook:~$ 
 
 
-2. =============== chdir ===================
-This command is the same as the cd command.
+3. =============== rm ==============
 
-C:\Users\Dedi Gunawan>chdir praxis-academy
+The 'rm' command removes files from the system without confirmation.
 
-C:\Users\Dedi Gunawan\praxis-academy>
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public   Templates  Videos
+Documents  examples.desktop  Pictures  sample1  Tugas
+dedi@dedi-HP-Notebook:~$ rm sample1
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public     Tugas
+Documents  examples.desktop  Pictures  Templates  Videos
+dedi@dedi-HP-Notebook:~$ 
+
+
+4. ============== mv ==================
+
+To move a file, use the command.
+
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public   Templates  Videos
+Documents  examples.desktop  Pictures  sample1  Tugas
+dedi@dedi-HP-Notebook:~$ cd Tugas
+dedi@dedi-HP-Notebook:~/Tugas$ ls
+praxis-academy
+dedi@dedi-HP-Notebook:~/Tugas$ cd ..
+dedi@dedi-HP-Notebook:~$ mv sample1 ~/Tugas/sample1
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public     Tugas
+Documents  examples.desktop  Pictures  Templates  Videos
+dedi@dedi-HP-Notebook:~$ cd Tugas
+dedi@dedi-HP-Notebook:~/Tugas$ ls
+praxis-academy  sample1
+dedi@dedi-HP-Notebook:~/Tugas$ 
+
+For renaming file: 
+
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public   Templates  Videos
+Documents  examples.desktop  Pictures  sample1  Tugas
+dedi@dedi-HP-Notebook:~$ mv sample1 sample2
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public   Templates  Videos
+Documents  examples.desktop  Pictures  sample2  Tugas
+dedi@dedi-HP-Notebook:~$ 
+
+5. ================== mkdir =================
+
+Creating Directories 
+
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public     Tugas
+Documents  examples.desktop  Pictures  Templates  Videos
+dedi@dedi-HP-Notebook:~$ mkdir Temp1
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public  Templates  Videos
+Documents  examples.desktop  Pictures  Temp1   Tugas
+dedi@dedi-HP-Notebook:~$ 
+
+
+6. ================= rmdir ===============
+
+To remove a directory, use the command - 
+g
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public  Templates  Videos
+Documents  examples.desktop  Pictures  Temp1   Tugas
+dedi@dedi-HP-Notebook:~$ rmdir Temp1
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public     Tugas
+Documents  examples.desktop  Pictures  Templates  Videos
+dedi@dedi-HP-Notebook:~$ 
+
+
+7. ================ mv =====================
+
+The 'mv' (move) command (covered earlier) can also be used for renaming directories. Use the below-given format: 
+
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public     Tugas   Videos
+Documents  examples.desktop  Pictures  Templates  Tugas1
+dedi@dedi-HP-Notebook:~$ mv Tugas1 Tugas2
+dedi@dedi-HP-Notebook:~$ ls
+Desktop    Downloads         Music     Public     Tugas   Videos
+Documents  examples.desktop  Pictures  Templates  Tugas2
+dedi@dedi-HP-Notebook:~$ 
+
+
+8. ================= man ===================
+
+Man stands for manual which is a reference book of a Linux operating system. It is similar to HELP file found in popular software. 
+
+man mv
+
+MV(1)                            User Commands                           MV(1)
+
+NAME
+       mv - move (rename) files
+
+SYNOPSIS
+       mv [OPTION]... [-T] SOURCE DEST
+       mv [OPTION]... SOURCE... DIRECTORY
+       mv [OPTION]... -t DIRECTORY SOURCE...
+
+DESCRIPTION
+       Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+
+       Mandatory  arguments  to  long  options are mandatory for short options
+       too.
+
+       --backup[=CONTROL]
+              make a backup of each existing destination file
+
+       -b     like --backup but does not accept an argument
+
+       -f, --force
+              do not prompt before overwriting
+
+
+9. ================== history ===============
+
+History command shows all the commands that you have used in the past for the current terminal session.
+
+dedi@dedi-HP-Notebook:~$ history
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  sudo apt autoremove
+    4  exit
+    5  ls
+    6  uname -r
+    7  mkdir novice
+    8  sudo mkdir novice
+    9  fdisk -l
+   10  sudo fdisk -l
+   11  fdisk -i
+   12  fdisk --i
+
+
+10. ================ apt ===============
+
+You can use the apt commands to install or remove a package. 
+
+dedi@dedi-HP-Notebook:~$ sudo apt-get update
+[sudo] password for dedi: 
+Get:1 http://packages.microsoft.com/repos/vscode stable InRelease [3.958 B]
+Get:2 http://packages.microsoft.com/repos/vscode stable/main amd64 Packages [155 kB]
+Hit:3 http://id.archive.ubuntu.com/ubuntu bionic InRelease                   
+Get:4 http://id.archive.ubuntu.com/ubuntu bionic-updates InRelease [88,7 kB]   
+Get:5 http://id.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]
+Get:6 http://id.archive.ubuntu.com/ubuntu bionic-updates/main i386 Packages [624 kB]
+Err:7 http://security.ubuntu.com/ubuntu bionic-security InRelease
+  502  Connection timed out [IP: 91.189.88.31 80]
+Get:8 http://id.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [816 kB]
+Get:9 http://id.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [287 kB]
+Get:10 http://id.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [295 kB]
+Get:11 http://id.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 48x48 Icons [73,8 kB]
+Get:12 http://id.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 64x64 Icons [143 kB]
+Get:13 http://id.archive.ubuntu.com/ubuntu bionic-updates/restricted i386 Packages [9.604 B]
+Get:14 http://id.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [24,1 kB]
+Get:15 http://id.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [6.620 B]
+Get:16 http://id.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1.032 kB]
+Get:17 http://id.archive.ubuntu.com/ubuntu bionic-updates/universe i386 Packages [996 kB]
+Get:18 http://id.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [319 kB]
+Get:19 http://id.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [264 kB]
+Get:20 http://id.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [197 kB]
+Get:21 http://id.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [457 kB]
+Get:22 http://id.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [9.308 B]
+Get:23 http://id.archive.ubuntu.com/ubuntu bionic-updates/multiverse i386 Packages [7.496 B]
+Get:24 http://id.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [4.508 B]
+Get:25 http://id.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2.464 B]
+Get:26 http://id.archive.ubuntu.com/ubuntu bionic-backports/universe i386 Packages [4.024 B]
+Get:27 http://id.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4.028 B]
+Get:28 http://id.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [7.976 B]
+Fetched 5.906 kB in 45s (132 kB/s)                                             
+Reading package lists... Done
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/bionic-security/InRelease  502  Connection timed out [IP: 91.189.88.31 80]
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+dedi@dedi-HP-Notebook:~$ 
+
+
+
+
+
+
+
+
+
+
+
+
+5. =========== 
+
+
+
+
+
+
 

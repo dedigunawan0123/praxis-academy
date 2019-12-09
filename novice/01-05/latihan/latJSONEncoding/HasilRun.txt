@@ -1,0 +1,8 @@
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/01-05/latihan/latJSONEncoding/gradle$ gradle run
+
+> Task :run
+{"balance":1000.21,"is_vip":true,"num":100,"name":"foo"}
+BUILD SUCCESSFUL in 924ms
+2 actionable tasks: 1 executed, 1 up-to-date
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/01-05/latihan/latJSONEncoding/gradle$ ^C
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/01-05/latihan/latJSONEncoding/gradle$ 

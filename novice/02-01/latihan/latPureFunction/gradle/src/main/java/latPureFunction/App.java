@@ -15,7 +15,8 @@ public class App {
         // System.out.println(new App().getGreeting());
         
         // dg. Ini adalah contoh pure function. Semua variable adalah di dalam function tsb,
-        // tidak ada variable yang digunakan dari global variable. 
+        // tidak ada variable yang digunakan dari global variable. Contoh method ini merupakan
+        // contoh method yang bagus untuk functional programming.
         ObjectWithPureFunction objectWithPureFunction = new ObjectWithPureFunction();
         System.out.println(objectWithPureFunction.sum(3, 4));
 

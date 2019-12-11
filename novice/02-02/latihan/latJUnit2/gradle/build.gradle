@@ -18,50 +18,17 @@ repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
-
-    // dg. Untuk JUnit
-    mavenCentral()
 }
 
 dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:28.0-jre'
 
-    //dg for Functional Function Java
-    implementation 'org.functionaljava:functionaljava:4.8'
-
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
-
-    // dg. Ini untuk JUnit
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
-    // dg. ini untuk run Junit 3/4 test
-    testImplementation("junit:junit:4.12")
-    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0")    
 }
 
 application {
     // Define the main class for the application.
-    mainClassName = 'lat2ArrayExist.App'
-
-}
-
-// dg. Ini untuk JUnit
-buildscript{
-    repositories{
-        mavenCentral()
-    }
-    dependencies{
-        // dg. Untuk JUnit
-        classpath 'org.junit.patform:junit-platform-gradle-plugin:1.0.0'
-    }
-}
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.junit.platform.gradle.plugin'
-
-test {
-    useJUnitPlatform()
+    mainClassName = 'latJUnit2.App'
 }

@@ -20,5 +20,17 @@ public class App {
         System.out.println("Ini adalah untuk create thread menggunakan class Thread");
         HelloThread helloThread = new HelloThread();
         helloThread.helloThreadFirst();
+
+        // dg. Ini adalah untuk pause thread menggunakan method sleep
+        System.out.println("Ini adalah untuk pause thread menggunakan method sleep");
+        SleepMessages sleepMessages = new SleepMessages();
+        try {
+            sleepMessages.sleepMessagesFirst();
+        }
+        catch (InterruptedException e){
+            e.printStackTrace();
+            System.out.println("Ada Interrupted Exception");
+        }
+        
     }
 }

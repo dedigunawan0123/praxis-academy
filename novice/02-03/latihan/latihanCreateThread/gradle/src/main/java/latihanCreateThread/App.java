@@ -21,7 +21,10 @@ public class App {
         HelloThread helloThread = new HelloThread();
         helloThread.helloThreadFirst();
 
-        // dg. Ini adalah untuk pause thread menggunakan method sleep
+        // note. cara Runnable adalah yg paling umum dipakai.
+
+        // dg. Ini adalah untuk pause thread menggunakan method sleep dan meng-interupsi thread
+        // menggunakan interrupted method
         System.out.println("Ini adalah untuk pause thread menggunakan method sleep");
         SleepMessages sleepMessages = new SleepMessages();
         try {
@@ -30,7 +33,53 @@ public class App {
         catch (InterruptedException e){
             e.printStackTrace();
             System.out.println("Ada Interrupted Exception");
+            Thread.interrupted();
+            System.out.println("Thread sudah di interupted");
         }
-        
-    }
-}
+
+        // dg. Ini untuk join thread, digunakan untuk menunggu thread lain sampai selesai 
+        // menyelesaikan prosesnya.
+        HelloThread t1 = new HelloThread();
+        HelloThread t2 = new HelloThread();
+        HelloThread t3 = new HelloThread();
+
+        // thread t1 starts 
+        t1.start(); 
+  
+        // starts second thread after when 
+        // first thread t1 has died. 
+        try
+        { 
+            System.out.println("Current Thread: "
+                  + Thread.currentThread().getName()); 
+            t1.join(); 
+        } 
+  
+        catch(Exception ex) 
+        { 
+            System.out.println("Exception has " + 
+                                "been caught" + ex); 
+        } 
+  
+        // t2 starts 
+        t2.start(); 
+  
+        // starts t3 after when thread t2 has died. 
+        try
+        { 
+            System.out.println("Current Thread: "
+                 + Thread.currentThread().getName()); 
+            t2.join(); 
+        } 
+  
+        catch(Exception ex) 
+        { 
+            System.out.println("Exception has been" + 
+                                    " caught" + ex); 
+        } 
+  
+        t3.start(); 
+    } 
+} 
+
+

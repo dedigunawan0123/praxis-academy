@@ -13,7 +13,7 @@ public class AppTest {
     }
 
     @Test
-    void junitTestAdder(){
+    public void junitTestAdder(){
         TestAdder testAdder = new TestAdder();
         testAdder.testSumPositiveNumbersOneAndOne();
         testAdder.testSumPositiveNumbersOneAndTwo();

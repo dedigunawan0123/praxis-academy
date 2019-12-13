@@ -12,7 +12,8 @@ public class App {
 
         // System.out.println(new App().getGreeting());
 
-        // dg. Abstract Factory Pattern adalah hampir sama dengan Factory Pattern,
+        // dg. Ini adalah implementasi dari AbstractFactoryPatternDemo.java 
+        // Abstract Factory Pattern adalah hampir sama dengan Factory Pattern,
         // bedanya pada Abstract Factory Pattern ada class Abstract AbstractFactory.class
         // dan class FactoryProducer.class. Dimana dengan kedua class ini, terdapat suatu
         // logic yang menentukan masuk ke pembentukan object mana dengan melihat bentuk rounded nya,

@@ -1,0 +1,16 @@
+      // dg. Ini adalah implementasi dari BridgePatternDemo.java
+      // Bridge Pattern digunakan untuk membagi 1 buah interface menjadi 2 class yg saling
+      // independent.
+      // Pada contoh ini, digunakan untuk membagi interface DrawAPI menjadi 2 class untuk
+      // GreenCircle.java dan RedCircle.java
+
+==================
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanBridgePattern/gradle$ gradle run
+
+> Task :run
+Drawing Circle[ color: red, radius: 10, x: 100, 100]
+Drawing Circle[ color: green, radius: 10, x: 100, 100]
+
+BUILD SUCCESSFUL in 893ms
+2 actionable tasks: 2 executed
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanBridgePattern/gradle$ 

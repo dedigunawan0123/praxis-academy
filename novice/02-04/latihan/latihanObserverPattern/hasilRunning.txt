@@ -1,0 +1,25 @@
+      // dg. Ini adalah implementasi dari ObserverPatternDemo.java
+      // Observer Pattern digunakan dalam 1 to many relationship, dimana bila 1 object terdapat
+      // modifikasi, maka object lain yg berhubungan dengan object tersebut akan dinotifikasi.
+      // Pada contoh ini dibuat 3 object, yaitu untuk merubah bilangan menjadi binary,
+      // hexa dan octal. Bila pada object Subject dilakukan perubahan, yaitu dengan mengeset
+      // nilai pada method setState(), maka object Subject akan menjalankan method 
+      // notifyAllObserver, dimana akan menjalankan method update() untuk tiap object binary,
+      // hexa dan octal. 
+
+=======================
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanObserverPattern/gradle$ gradle run
+
+> Task :run
+First state change: 15
+Hex String: F
+Octal String: 17
+Binary String: 1111
+Second state change: 10
+Hex String: A
+Octal String: 12
+Binary String: 1010
+
+BUILD SUCCESSFUL in 883ms
+2 actionable tasks: 2 executed
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanObserverPattern/gradle$ 

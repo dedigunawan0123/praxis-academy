@@ -1,0 +1,10 @@
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanFactoryPattern/gradle$ gradle run
+
+> Task :run
+Inside Circle::draw() method.
+Inside Rectangle::draw() method.
+Inside Square::draw() method.
+
+BUILD SUCCESSFUL in 771ms
+2 actionable tasks: 1 executed, 1 up-to-date
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanFactoryPattern/gradle$ 

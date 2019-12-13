@@ -1,0 +1,21 @@
+      // dg. Ini adalah implementasi dari AdapterPatternDemo.java
+      // Adapter Pattern merupakan Structural Design Pattern.
+      // Adapter Pattern digunakan untuk men-struktur class, dimana class ini meng-implementasi
+      // 2 buah interface yang saling tidak compatible, tapi dapat saling bekerjasama nantinya.
+      // Contohnya disini adalah membuat audioplayer dari 2 buah interface, yaitu interface MediaPlayer
+      // dan interface AdvanceMediaPlayer. Pada audioPlayer (yang built in nya untuk mp3)
+      // ditambahkan class MediaPlayer sebagai penambahan fasilitas/support untuk 
+      // AdvanceMediaPlayer, yang dpt mensupport untuk mem-play mp4 dan vlc
+
+==================
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanAdapterPattern/gradle$ gradle run
+
+> Task :run
+Playing mp3 file. Name: beyond the horizon.mp3
+Playing mp4 file. Name: alone.mp4
+Playing vlc file. Name: far far away.vlc
+Invalid media. avi format not supported
+
+BUILD SUCCESSFUL in 1s
+2 actionable tasks: 2 executed
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanAdapterPattern/gradle$ 

@@ -1,3 +1,12 @@
+        // dg. Ini adalah implementasi dari AbstractFactoryPatternDemo.java 
+        // Abstract Factory Pattern adalah hampir sama dengan Factory Pattern,
+        // bedanya pada Abstract Factory Pattern ada class Abstract AbstractFactory.class
+        // dan class FactoryProducer.class. Dimana dengan kedua class ini, terdapat suatu
+        // logic yang menentukan masuk ke pembentukan object mana dengan melihat bentuk rounded nya,
+        // jadi ada logic lainnya, yaitu dengan melihat rounded nya.
+        // Hal ini menjadikan Abstract Factory Pattern seperti sebuah Factory dari Factory
+
+==========================
 dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanAbstractFactoryPattern/gradle$ gradle run
 
 > Task :run

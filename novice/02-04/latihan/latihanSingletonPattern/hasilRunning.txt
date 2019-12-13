@@ -1,3 +1,9 @@
+      // dg. Ini adalah implementasi dari SingletonPatternDemo.java
+      // Singleton Pattern ini digunakan bila class yg akan dibuat object-nya,
+      // mempunyai tipe constructor yg private dan instance objectnya berupa static,
+      // sehingga diharapkan hanya dirinya sendiri yg dpt membuat instantiate objectnya
+
+===================
 dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanSingletonPattern/gradle$ gradle run
 
 > Task :run

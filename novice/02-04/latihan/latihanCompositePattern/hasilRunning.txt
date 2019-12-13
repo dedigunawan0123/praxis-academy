@@ -1,0 +1,19 @@
+      // dg. Ini adalah implementasi CompositePatternDemo.java
+      // Composite Pattern digunakan untuk membuat 1 object dari group of objects.
+
+==============
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanCompositePattern/gradle$ gradle run
+
+> Task :run
+Employee :[ Name : John, dept : CEO, salary :30000 ]
+Employee :[ Name : Robert, dept : Head Sales, salary :20000 ]
+Employee :[ Name : Richard, dept : Sales, salary :10000 ]
+Employee :[ Name : Rob, dept : Sales, salary :10000 ]
+Employee :[ Name : Michel, dept : Head Marketing, salary :20000 ]
+Employee :[ Name : Laura, dept : Marketing, salary :10000 ]
+Employee :[ Name : Bob, dept : Marketing, salary :10000 ]
+
+BUILD SUCCESSFUL in 914ms
+2 actionable tasks: 2 executed
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/02-04/latihan/latihanCompositePattern/gradle$ 
+

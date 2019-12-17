@@ -15,6 +15,8 @@ import com.mongodb.reactivestreams.client.MongoCollection;
 import com.mongodb.reactivestreams.client.*;
 
 // import static tour.SubscriberHelpers.PrintDocumentSubscriber;
+import com.mongodb.client.MongoCursor;
+import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
@@ -60,14 +62,13 @@ public class Barang{
 
         // Ini adalah untuk connection
         try{
-            // MongoClient mongoClient = MongoClient.create("mongodb://localhost");
-            MongoClient mongoClient = MongoClients.create("mongodb://localhost");
+            // MongoClient mongoClient = MongoClients.create("mongodb://localhost");
+            MongoClient mongoClient = MongoClients.create();
             MongoDatabase database = mongoClient.getDatabase("dbInventory");
-            // Set<String> colls = database.getCollectionNames("Barang");
             MongoCollection<Document> collection = database.getCollection("Barang");
-            subscriber = new PrintDocumentSubscriber();
-            collection.find().subscribe(subscriber);
-            subscriber.await();
+
+            // FindPublisher<TDocument> find();
+            System.out.println(collection.find());
 
             mongoClient.close();
         }

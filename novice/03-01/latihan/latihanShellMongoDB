@@ -1,0 +1,122 @@
+
+           Cara membuat database mongo dengan manual
+           - buat direktory 
+           /home/dedi/Tugas/dgMongo/dgInventory/db
+-----------------------
+           - jalankan server
+           $ mongod --dbpath Tugas/dgMongo/dgInventory/db/
+           Kalo sudah jalan maka akan error “already in use”
+           connecting to: mongodb://127.0.0.1:27017
+           Host : 127.0.0.1 (localhost).
+           Port : 27017
+           Note :
+           - $ mongod : untuk menjalankan server
+           - $ mongo : untuk mengakses server dengan shell mongoDB
+           Caranya :
+           $ mongo
+           Atau 
+           $ mongo 192.169.1.1
+----------------------
+           - untuk melihat database yg sedang aktif, gunakan “db”
+           > db
+           test
+---------------------
+           - untuk melihat daftar database, gunakan “show dbs”
+           > show dbs
+           admin        0.000GB
+           config       0.000GB
+           dbInventory  0.000GB
+           local        0.000GB
+           > 
+----------------------
+           > membuat database atau switch ke database
+           > use dbInventory
+           switched to db dbInventory
+---------------------
+           - melihat daftar collection
+           > show collections
+           Barang
+           dbInventory
+           > 
+---------------------
+           - Untuk melihat berapa jumlah baris
+           > db.Barang.count()
+           2
+           > 
+-----------------------
+           - Untuk melihat record2 di collection
+           > db.Barang.find()
+           { "_id" : ObjectId("5df72babd5389c252c49d29c"), "kode_barang" : "B001", "nama_barang" : "Barang 001", "kode_supplier" : "S001", "stock_barang" : 100 }
+           { "_id" : ObjectId("5df72be2d5389c252c49d29d"), "kode_barang" : "B002", "nama_barang" : "Barang 002", "kode_supplier" : "S001", "stock_barang" : 200 }
+           > 
+--------------------------
+           - Untuk menampilkan isi record dalam collection, dan ditampilkan dengan rapi
+           > db.Barang.find().pretty()
+           {
+           	"_id" : ObjectId("5df72babd5389c252c49d29c"),
+           	"kode_barang" : "B001",
+           	"nama_barang" : "Barang 001",
+           	"kode_supplier" : "S001",
+           	"stock_barang" : 100
+           }
+           {
+           	"_id" : ObjectId("5df72be2d5389c252c49d29d"),
+           	"kode_barang" : "B002",
+           	"nama_barang" : "Barang 002",
+           	"kode_supplier" : "S001",
+           	"stock_barang" : 200
+           }
+           > 
+---------------------------
+           - Untuk menampilkan record yg memliki kode_barang = “B001”
+           > db.Barang.find({kode_barang : "B001" })
+           { "_id" : ObjectId("5df72babd5389c252c49d29c"), "kode_barang" : "B001", "nama_barang" : "Barang 001", "kode_supplier" : "S001", "stock_barang" : 100 }
+           >
+ 
+-------------------------------           
+           - Untuk membuat collection
+           > db.createCollection("Barang")
+           { "ok" : 1 }
+           > 
+----------------------------
+           - untuk menambah (add / insert) data :
+           > db.dbInventory.insert({
+           ...     kode_barang: "B001",
+           ...     nama_barang: "Barang 001",
+           ...     kode_supplier: "S001",
+           ...     stock_barang: 100
+           ... })
+           WriteResult({ "nInserted" : 1 })
+           > 
+-------------------------------
+           - Untuk meng-update sebuah record-record
+           > db.Barang.update(
+           ...    {
+           ...       kode_barang: "B002",
+           ...    },
+           ...    {
+           ...       kode_barang: "B003",
+           ...       nama_barang: "Barang 002",
+           ...       kode_supplier: "S001",
+           ...       stock_barang: 200
+           ...    }
+           ... )
+           WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+------------------------
+           
+           - Untuk menghapus record pada collections
+           > db.Barang.remove({kode_barang: "B002"})
+           WriteResult({ "nRemoved" : 0 })
+-------------------------
+           > Untuk menghapus/drop suatu collection pada database 
+           > show collections
+           Barang
+           dbInventory
+           > db.dbInventory.drop()
+           true
+           > show collections
+           Barang
+           > 
+--------------------------
+           - Untuk menghapus / drop database
+db.dropDatabase();

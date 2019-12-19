@@ -1,0 +1,14 @@
+{
+  "name": "latihan_npm",
+  "version": "1.0.0",
+  "description": "Ini adalah latihan NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Dedi Gunawan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,214 @@
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ npm version
+{
+  npm: '6.10.3',
+  ares: '1.15.0',
+  brotli: '1.0.7',
+  http_parser: '2.8.0',
+  llhttp: '1.1.4',
+  modules: '72',
+  napi: '4',
+  nghttp2: '1.39.2',
+  node: '12.10.0',
+  openssl: '1.1.1c',
+  uv: '1.31.0',
+  v8: '7.6.303.29-node.16',
+  zlib: '1.2.11'
+}
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ npm -v
+6.10.3
+
+
+--------------------------------------------
+NPM Command
+--------------------------------------------
+npm init : membuat file package.json
+--------------------------------------------
+
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (latihannpm) latihan_npm
+version: (1.0.0) 
+description: Ini adalah latihan NPM
+entry point: (index.js) 
+test command: test
+git repository: 
+keywords: 
+author: Dedi Gunawan
+license: (ISC) 
+About to write to /home/dedi/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM/package.json:
+
+{
+  "name": "latihan_npm",
+  "version": "1.0.0",
+  "description": "Ini adalah latihan NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Dedi Gunawan",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) yes
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ ls
+package.json
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ 
+
+
+--------------------------------------------------
+npm install express : untuk menginstall packages
+--------------------------------------------------
+
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ npm install express
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN latihan_npm@1.0.0 No repository field.
+
++ express@4.17.1
+added 50 packages from 37 contributors and audited 126 packages in 25.512s
+found 0 vulnerabilities
+
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ ls
+'Hasil Coba'    package.json
+ node_modules   package-lock.json
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ 
+
+
+------------------------------------------------------
+npm update : untuk mengupdate semua packages
+------------------------------------------------------
+
+
+03-04/latihan/latihanNPM$ npm update
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ 
+
+
+---------------------------------------------------------------------------
+npm install : untuk menginstall semua packages yg dibutuhkan oleh project
+---------------------------------------------------------------------------
+
+
+
+03-04/latihan/latihanNPM$ npm install
+npm WARN latihan_npm@1.0.0 No repository field.
+
+audited 126 packages in 7.271s
+found 0 vulnerabilities
+
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ ls
+'Hasil Coba'    package.json
+ node_modules   package-lock.json
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ 
+
+
+-------------------------------------------------
+npm list : 
+-------------------------------------------------
+
+
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ npm list
+latihan_npm@1.0.0 /home/dedi/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM
+└─┬ express@4.17.1
+  ├─┬ accepts@1.3.7
+  │ ├─┬ mime-types@2.1.25
+  │ │ └── mime-db@1.42.0
+  │ └── negotiator@0.6.2
+  ├── array-flatten@1.1.1
+  ├─┬ body-parser@1.19.0
+  │ ├── bytes@3.1.0
+  │ ├── content-type@1.0.4 deduped
+  │ ├── debug@2.6.9 deduped
+  │ ├── depd@1.1.2 deduped
+  │ ├─┬ http-errors@1.7.2
+  │ │ ├── depd@1.1.2 deduped
+  │ │ ├── inherits@2.0.3
+  │ │ ├── setprototypeof@1.1.1 deduped
+  │ │ ├── statuses@1.5.0 deduped
+  │ │ └── toidentifier@1.0.0
+  │ ├─┬ iconv-lite@0.4.24
+  │ │ └── safer-buffer@2.1.2
+  │ ├── on-finished@2.3.0 deduped
+  │ ├── qs@6.7.0 deduped
+  │ ├─┬ raw-body@2.4.0
+  │ │ ├── bytes@3.1.0 deduped
+  │ │ ├── http-errors@1.7.2 deduped
+  │ │ ├── iconv-lite@0.4.24 deduped
+  │ │ └── unpipe@1.0.0 deduped
+  │ └── type-is@1.6.18 deduped
+  ├─┬ content-disposition@0.5.3
+  │ └── safe-buffer@5.1.2 deduped
+  ├── content-type@1.0.4
+  ├── cookie@0.4.0
+  ├── cookie-signature@1.0.6
+  ├─┬ debug@2.6.9
+  │ └── ms@2.0.0
+  ├── depd@1.1.2
+  ├── encodeurl@1.0.2
+  ├── escape-html@1.0.3
+  ├── etag@1.8.1
+  ├─┬ finalhandler@1.1.2
+  │ ├── debug@2.6.9 deduped
+  │ ├── encodeurl@1.0.2 deduped
+  │ ├── escape-html@1.0.3 deduped
+  │ ├── on-finished@2.3.0 deduped
+  │ ├── parseurl@1.3.3 deduped
+  │ ├── statuses@1.5.0 deduped
+  │ └── unpipe@1.0.0
+  ├── fresh@0.5.2
+  ├── merge-descriptors@1.0.1
+  ├── methods@1.1.2
+  ├─┬ on-finished@2.3.0
+  │ └── ee-first@1.1.1
+  ├── parseurl@1.3.3
+  ├── path-to-regexp@0.1.7
+  ├─┬ proxy-addr@2.0.5
+  │ ├── forwarded@0.1.2
+  │ └── ipaddr.js@1.9.0
+  ├── qs@6.7.0
+  ├── range-parser@1.2.1
+  ├── safe-buffer@5.1.2
+  ├─┬ send@0.17.1
+  │ ├── debug@2.6.9 deduped
+  │ ├── depd@1.1.2 deduped
+  │ ├── destroy@1.0.4
+  │ ├── encodeurl@1.0.2 deduped
+  │ ├── escape-html@1.0.3 deduped
+  │ ├── etag@1.8.1 deduped
+  │ ├── fresh@0.5.2 deduped
+  │ ├── http-errors@1.7.2 deduped
+  │ ├── mime@1.6.0
+  │ ├── ms@2.1.1
+  │ ├── on-finished@2.3.0 deduped
+  │ ├── range-parser@1.2.1 deduped
+  │ └── statuses@1.5.0 deduped
+  ├─┬ serve-static@1.14.1
+  │ ├── encodeurl@1.0.2 deduped
+  │ ├── escape-html@1.0.3 deduped
+  │ ├── parseurl@1.3.3 deduped
+  │ └── send@0.17.1 deduped
+  ├── setprototypeof@1.1.1
+  ├── statuses@1.5.0
+  ├─┬ type-is@1.6.18
+  │ ├── media-typer@0.3.0
+  │ └── mime-types@2.1.25 deduped
+  ├── utils-merge@1.0.1
+  └── vary@1.1.2
+
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-04/latihan/latihanNPM$ 
+
+
+--------------------------------------------------
+
+
+
+
+

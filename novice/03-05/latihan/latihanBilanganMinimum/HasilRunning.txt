@@ -1,0 +1,4 @@
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-05/latihan/latihanBilanganMinimum$ node min.js
+0
+-10
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-05/latihan/latihanBilanganMinimum$ 

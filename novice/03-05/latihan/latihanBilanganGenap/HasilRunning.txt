@@ -1,0 +1,5 @@
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-05/latihan/latihanBilanganGenap$ node isEven.js
+true
+false
+false
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-05/latihan/latihanBilanganGenap$ 

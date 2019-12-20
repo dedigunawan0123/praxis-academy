@@ -1,0 +1,4 @@
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-05/latihan/latihanBeanCounting$ node beanCounting.js 
+2
+4
+dedi@dedi-HP-Notebook:~/Tugas/praxis-academy/novice/03-05/latihan/latihanBeanCounting$ 

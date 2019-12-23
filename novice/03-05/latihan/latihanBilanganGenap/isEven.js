@@ -1,5 +1,7 @@
 function isEven(x) {
-    if (x == 0) {
+    if (x < 0) {
+        return null;
+    } else if (x == 0) {
         return true;
     } else if (x == 1) {
         return false;
@@ -7,8 +9,6 @@ function isEven(x) {
         return true;
     } else if (x % 2 != 0) {
         return false;
-    } else if (x < 0) {
-        return null;
     }
 }
 

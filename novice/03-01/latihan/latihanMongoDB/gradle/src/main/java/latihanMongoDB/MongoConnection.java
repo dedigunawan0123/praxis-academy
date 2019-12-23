@@ -10,4 +10,8 @@ package latihanMongoDB;
 
 public class MongoConnection{
 
+    public void MakeConnection(){
+        
+    }
+
 }

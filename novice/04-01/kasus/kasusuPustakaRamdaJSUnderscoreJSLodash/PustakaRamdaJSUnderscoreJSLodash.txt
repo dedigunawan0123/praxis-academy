@@ -1,0 +1,10 @@
+RamdaJS, UnderscoreJS dan lodash merupakan library dari JavaScript
+
+RamdaJS dibuat oleh Facebook, digunakan untuk mengatasi permasalahan
+mutable state pada JavaScript.
+
+UnderscoreJS merupakan library JavaScript yg berisi fungsi2
+tanpa meng-extend object2 built-in
+
+Lodash merupakan library JavaScript yang digunakan untuk menggabungkan
+dua buah array yang berisi object.

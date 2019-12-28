@@ -6,6 +6,9 @@ getData('123', function(data1) {
     console.log("Data is:", data1);
 });
 
+
+
+
 console.log("Getting Data2");
 getData('456', function(data1) {
     console.log("Data is:", data1);

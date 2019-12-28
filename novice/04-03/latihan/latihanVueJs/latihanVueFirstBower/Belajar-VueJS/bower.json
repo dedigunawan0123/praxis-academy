@@ -1,0 +1,22 @@
+{
+  "name": "Belajar-VueJS",
+  "homepage": "\"\"",
+  "authors": [
+    "Dedi Gunawan"
+  ],
+  "description": "Belajar Vue js",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "vue": "^2.6.11",
+    "jquery": "^3.4.1"
+  }
+}

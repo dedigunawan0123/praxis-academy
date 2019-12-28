@@ -1,0 +1,14 @@
+dedi@dedi-HP-Notebook:~$ java -version
+openjdk version "1.8.0_232"
+OpenJDK Runtime Environment (build 1.8.0_232-20191008104205.buildslave.jdk8u-src-tar--b07)
+OpenJDK 64-Bit GraalVM CE 19.3.0 (build 25.232-b07-jvmci-19.3-b05, mixed mode)
+
+dedi@dedi-HP-Notebook:~$ sudo npm cache clean --force
+
+dedi@dedi-HP-Notebook:~$ sudo npm install -g @vue/cli
+[sudo] password for dedi: 
+loadDep:from2 → get       ▌ ╢██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
+WARN engine execa@3.4.0: wanted: {"node":"^8.12.0 || >=9.7.0"} (current: {"node"loadDep:strip-final-newli
+
+dedi@dedi-HP-Notebook:~$ vue --version
+@vue/cli 4.1.1

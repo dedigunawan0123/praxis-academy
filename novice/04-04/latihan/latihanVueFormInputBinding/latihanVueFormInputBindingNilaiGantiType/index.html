@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='app-6'>
+        <!-- dg. Ini adalah kondisi default, dimana selalu mengembalikan nilai
+             string atau boolean -->
+        <!-- `picked` adalah sebuah string "a" ketika dicentang -->
+        <input type="radio" v-model="picked" value="a">
+
+        <!-- `toggle` adalah antara true or false -->
+        <input type="checkbox" v-model="toggle">
+
+        <!-- `selected` adalah sebuah string "abc" ketika opsi pertama dipilih -->
+        <select v-model="selected">            
+            <option value="abc">ABC</option>
+        </select>
+
+        <!-- dg. Dibawah adalah dengan menggunakan v-bind, sehingga
+                     dapat mengembalikan type data lain -->
+        <!-- dg. Ini untuk checkbox -->
+        <input type="checkbox" v-model="toggle" true-value="yes" false-value="no">
+        <!-- 
+        // ketika dicentang: 
+        vm.toggle === 'yes'
+        // ketika tidak dicentang:
+        vm.toggle === 'no'
+        -->
+
+        <!-- dg. Ini untuk radio button -->
+
+        <input type="radio" v-model="pick" v-bind:value="a">
+
+        <!--
+        // ketika dicentang:
+        vm.pick === vm.a
+        -->
+
+        <!-- dg. Ini untuk select option -->
+
+        <select v-model="selected">
+            <option v-bind:value="{ number: 123 }">123</option>
+        </select>
+
+        <!--
+          // ketika dipilih:
+          typeof vm.selected // => 'object'
+          vm.selected.number // => 123
+        -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scripts/VueFormInputBindingNilaiGantiType.js"></script>
+</body>
+
+</html>

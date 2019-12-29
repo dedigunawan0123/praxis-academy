@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='app-6'>
+        <input type="checkbox" id="jack" value="Jack" v-model="checked">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checked">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checked">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Nama yang di centang : {{ checked }}</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scripts/VueFormInputCheckBoxBanyak.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,8 @@
+/**
+ * dg. Ini untuk mengakses web service Rest API dengan cara Rest API client
+ * dengan media type text/plain, text/xml dan text/html
+ */
+
 package latihanJerseyClient;
 
 import java.net.URI;
@@ -42,6 +47,6 @@ public class Test {
     }
 
     private static URI getBaseURI() {
-        return UriBuilder.fromUri("http://localhost:8080/latihanJersey").build();
+        return UriBuilder.fromUri("http://localhost:8080/latihanJerseyJAXB").build();
     }
 }

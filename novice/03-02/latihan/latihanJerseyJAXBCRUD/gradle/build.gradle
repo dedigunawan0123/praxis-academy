@@ -12,6 +12,10 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application.
     id 'application'
+
+    // dg. Ditambahkan untuk Rest Jersey biasa tanpa JAXB
+    id 'war'
+    id 'eclipse-wtp'
 }
 
 repositories {
@@ -27,18 +31,28 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 
-    // dg. Ini untuk Jersey Client
+    // dg. Ditambahkan untuk Rest Jersey biasa tanpa JAXB
     compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
 
-    // dg. Ditambahkan untuk mensupport Jersey JAXB untuk mensupport appliation/json
+    // dg. Ditambahkan untuk Rest Jersey dengan JAXB untuk mensupport media type application/json
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
     compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.25.1'
+
+    // dg. Ditambahkan untuk xml.bind, karena sudah tidak disupport lagi di java 11
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2" 
+
+    // dg. Ditambahkan untuk mendukung CRUD
+    compile 'javax.servlet:javax.servlet-api:4.0.0-b07'
 }
 
 application {
     // Define the main class for the application.
-    // mainClassName = 'latihanJerseyClient.App'
-    // mainClassName = 'latihanJerseyClient.Test'
-    // mainClassName = 'latihanJerseyClient.TodoTest'
-    // mainClassName = 'latihanJerseyClient.TestURL'
-    mainClassName = 'latihanJerseyClient.TesterJAXBCRUD'
+    mainClassName = 'latihanJerseyJAXBCRUD.App'
 }
+
+// dg. Ditambahkan untuk Rest Jersey tanpa JAXB, karena 
+// membuat file web.xml pada WebContent/WEB-INF
+project.webAppDirName = 'WebContent'
+
+
